@@ -1,11 +1,12 @@
 <div>
-    <form action="">
+    <form action="" *ngIf="isShowLoginForm">
         <label for="username">Tên đăng nhập</label>
         <input type="text" name="username" id="username">
 
         <label for="psw">Mật Khẩu</label>
         <input type="password" name="psw" id="psw">
 
-        <input type="button" value="Đăng Nhập">
+        <input type="button" value="Đăng Nhập" (click)="handleLogin()">
     </form>
+    <div *ngIf="!isShowLoginForm">Login success</div>
 </div>
